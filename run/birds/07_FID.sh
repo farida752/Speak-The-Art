@@ -1,9 +1,6 @@
-real_path=data/birds/CUB_200_2011/Test_image
-gen_path=outputs/gan/birds/TestImage
-save_path=outputs/gan/birds/FID.text
+gen_path='/content/drive/MyDrive/S2IGAN/outputs/gan/birds/TestImage/epoch40'
+real_path='/content/drive/MyDrive/S2IGAN/data/birds/CUB_200_2011/images'
 
-python3 fid_score.py --real_path $real_path \
-                --gen_path $gen_path \
-				--save_path $save_path
+python3 fid_score.py  $gen_path  $real_path --device cuda:0
               
 			
